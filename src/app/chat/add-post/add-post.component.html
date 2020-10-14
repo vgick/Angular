@@ -1,0 +1,26 @@
+<form class="h-100">
+	<div class="row">
+		<div class="col">
+			<mat-form-field class="full-width" appearance=standard>
+				<mat-label class="pl-1">Комментарий</mat-label>
+				<textarea #message
+							 class="pl-1"
+							 matInput
+							 placeholder="введит комментарий"
+							 style="height: 50px"
+				></textarea>
+			</mat-form-field>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col w-100 pt-1">
+			<button mat-raised-button
+					  color="primary"
+					  class="float-right mr-2"
+					  (click)="addMessage()"
+					  [disabled]="sendButtonDisable"
+			>Сохранить</button>
+		</div>
+	</div>
+</form>
+

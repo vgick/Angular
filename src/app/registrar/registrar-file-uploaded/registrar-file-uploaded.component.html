@@ -1,0 +1,58 @@
+<h3 class="pt-2 pl-2 mb-0 font-weight-bold mat-elevation-z8 top-radius" [class.allert]="noFiles">
+	{{registrarDocument.fileDescription}}
+</h3>
+
+<table mat-table [dataSource]="dataSource" matSort style="width: 100%" class="mat-elevation-z2 mt-1" *ngIf="!noFiles">
+
+	<ng-container matColumnDef="fileName">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header style="width: 20%"> Имя файла </th>
+		<td mat-cell *matCellDef="let element" class="text-left"> {{element.fileName}} </td>
+	</ng-container>
+
+	<ng-container matColumnDef="uploadDate">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header class="first" style="width: 20%"> Дата загрузки </th>
+		<td mat-cell *matCellDef="let element" class="text-left"> {{element.uploadDate | date: 'd.MM.yyyy&nbsp;&nbsp;HH:mm:ss'}} </td>
+	</ng-container>
+
+	<ng-container matColumnDef="authorName">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header style="width: 34%"> Автор документа </th>
+		<td mat-cell *matCellDef="let element" class="text-left"> {{element.authorName}} </td>
+	</ng-container>
+
+
+	<ng-container matColumnDef="Download">
+		<th mat-header-cell  *matHeaderCellDef style="width: 13%"> Скачать </th>
+		<td mat-cell *matCellDef="let element" class="text-center" >
+			<a mat-button color="primary" [href]="getFileURL(element.id)"><mat-icon>cloud_download</mat-icon>&nbsp;Скачать</a>
+		</td>
+	</ng-container>
+
+	<ng-container matColumnDef="Delete">
+		<th mat-header-cell  *matHeaderCellDef style="width: 13%">Удалить </th>
+		<td mat-cell *matCellDef="let element" class="text-center">
+			<button mat-button color="warn" (click)="deleteFile(element.id)"><mat-icon>delete</mat-icon>&nbsp;Удалить</button>
+		</td>
+	</ng-container>
+
+
+	<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div class="row">
+	<div class="col-12">
+		<mat-progress-bar mode="query" *ngIf="requestToServer"></mat-progress-bar>
+	</div>
+</div>
+
+<app-registrar-upload-files
+	[Disabled] = "!registrarDocument.writeAccess"
+	[idFileDescription]="registrarDocument.id"
+	[client1CCode]="client1CCode"
+	[account1CCode]="account1CCode"
+	(uploaded)="updateForm()"
+>
+</app-registrar-upload-files>
+
+
+

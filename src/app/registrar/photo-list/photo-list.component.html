@@ -1,0 +1,17 @@
+<mat-card>
+
+	<mat-card-header>
+		<mat-card-title>
+			Ранее загруженные фотографии
+		</mat-card-title>
+	</mat-card-header>
+
+	<mat-card-content>
+		<ul>
+			<li *ngFor="let file of files">
+				<a [href]="generatePhotoUrl(file.id)" mat-button mat-stroked-button><mat-icon>portrait</mat-icon>{{file.uploadDate}}</a>
+			</li>
+		</ul>
+
+	</mat-card-content>
+</mat-card>

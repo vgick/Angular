@@ -1,0 +1,27 @@
+.full-width {
+	width: 100%;
+}
+
+mat-form-field {
+	margin-right: 12px;
+}
+
+textarea.mat-input-element {
+	box-sizing: initial;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

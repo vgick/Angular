@@ -1,0 +1,33 @@
+<div [style.bottom]="bottom + 'px'" class="notificationStyle" [@bounce]="bounce" *ngIf="visibleNotification">
+	<mat-card class="p-1 h-100">
+		<mat-card-header [appNotificationColor]="notification.type">
+
+			<div class="notification-title">
+				<span class="notification-title-message float-left">
+					<strong>
+						{{ notification.notification.messageCode }}
+						&nbsp;
+						{{ notification.notification.title }}
+					</strong>
+				</span>
+				<span class="closebtn" (click)="closeNotification()">&times;</span>
+			</div>
+
+		</mat-card-header>
+
+		<mat-card-content>
+
+				<label #messageText class="message-text">{{ notification.notification.message }}</label>
+				<button
+					mat-icon-button
+					aria-label="раскрыть"
+					*ngIf="messageIsLong"
+					(click)="openDetails()"
+				>
+					<mat-icon>more</mat-icon>
+				</button>
+
+		</mat-card-content>
+
+	</mat-card>
+</div>

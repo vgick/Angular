@@ -1,0 +1,15 @@
+<mat-progress-bar mode="query" *ngIf="uploading"></mat-progress-bar>
+
+<div class="mt-1 mb-4 mat-elevation-z6 bottom-radius">
+	<button mat-raised-button color="primary" (click)="onClick()" class="m-2" [disabled]="Disabled">
+		<mat-icon>cloud_upload</mat-icon>
+		&nbsp;Сохранить
+	</button>
+	<input type="file"
+			 #fileInput
+			 id="fileUpload"
+			 name="fileUpload"
+			 multiple (change)="upload()"
+			 accept=".gif,.jpg,.jpeg,.pdf,.png,.tif"
+	/>
+</div>

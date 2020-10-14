@@ -1,0 +1,57 @@
+a.navbar-brand {
+	white-space: normal;
+	text-align: center;
+	word-break: break-all;
+}
+
+.box-shadow {
+	box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.link-active {
+	font-weight: bold;
+	border: solid;
+	border-bottom-width: 3px;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	border-color: darkslateblue;
+}
+
+li {
+	background-color: #f8f9fa;
+	margin-left: 5px;
+	border-radius: 3px;
+
+}
+
+li:not(.link-active) {
+	background-color: #f8f9fa;
+	box-shadow: 1px 0 5px 0 rgba(0,0,0, 0.5);
+	-moz-box-shadow: 1px 0 5px 0 rgba(0,0,0, 0.5);
+	-webkit-box-shadow: 1px 0 5px 0 rgba(0,0,0, 0.5);
+}
+
+li:not(.link-active):hover {
+	border-bottom-width: 3px;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	border-style: solid;
+	border-color: lightgrey;
+}
+
+:host .mat-button{
+	/*border-radius: 18px !important;*/
+	width: 130px;
+	/*box-shadow: 1px 0 10px 0 rgba(0,0,0, 0.5);*/
+	/*-moz-box-shadow: 1px 0 10px 0 rgba(0,0,0, 0.5);*/
+	/*-webkit-box-shadow: 1px 0 10px 0 rgba(0,0,0, 0.5);*/
+}
+
+.title {
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+		0 -5px 35px rgba(255, 255, 255, 0.3);
+}
+

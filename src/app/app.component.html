@@ -1,0 +1,12 @@
+<app-top-nav-menu></app-top-nav-menu>
+
+<div class="container-fluid d-flex flex-column m-0 p-0">
+	<div class="router-container">
+		<mat-progress-bar mode="query" *ngIf="loading"></mat-progress-bar>
+		<router-outlet class="p-0 m-0"></router-outlet>
+	</div>
+	<ng-template appAdHost></ng-template>
+</div>
+
+
+

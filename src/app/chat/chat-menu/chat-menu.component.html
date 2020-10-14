@@ -1,0 +1,33 @@
+<div class="vertical-menu row" [class.show]="menuOpened">
+	<div class="d-inline-flex">
+
+		<div class="h-100">
+			<p class="vertical-text" (click)="menuOpened = !menuOpened">
+				{{menuTitle}}
+			</p>
+		</div>
+
+		<div class="menu-body">
+			<mat-card>
+
+				<mat-card-header class="mat-elevation-z2 top-radius">
+					<mat-card-title class="mt-3">{{cardTitle}}</mat-card-title>
+					<mat-card-subtitle>{{subTitle}}</mat-card-subtitle>
+				</mat-card-header>
+				<mat-card-content class="mat-elevation-z2 mt-2 bottom-radius">
+					<div class="post-list-section">
+						<div class="post-list p-2">
+							<app-post-list [account1CCode]="account1CCode"></app-post-list>
+						</div>
+						<hr class="divider m-0 p-0" />
+						<div class="add-post">
+							<app-add-post [account1CCode]="account1CCode"></app-add-post>
+						</div>
+					</div>
+				</mat-card-content>
+
+			</mat-card>
+		</div>
+
+	</div>
+</div>

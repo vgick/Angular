@@ -1,0 +1,22 @@
+
+<div class="col-12 input-group">
+	<div class="col-6 pr-1">
+		<mat-form-field class="col-12">
+			<mat-label>
+				Введити номер договора 1С
+			</mat-label>
+			<input matInput type="text" [(ngModel)]="account1CCode" (keyup.enter)="setAccountNumber()" placeholder="номер договора 1С">
+		</mat-form-field>
+	</div>
+	<div class="col-6  pr-1 pl-1">
+		<button type="submit" mat-raised-button (click)="setAccountNumber()" color="primary">
+			Выбрать документы
+		</button>
+	</div>
+<!--	<div class="input-group-prepend col-4 m-0 p-0">-->
+<!--		<span class="input-group-text flex-fill">Номер договора</span>-->
+<!--	</div>-->
+<!--	<input class="form-control col-4" [(ngModel)]="account1CCode" placeholder="введите номер договра" />-->
+<!--	<button type="submit" class="form-control btn btn-info col-4" (click)="onClick()">{{actioName}}</button>-->
+</div>
+

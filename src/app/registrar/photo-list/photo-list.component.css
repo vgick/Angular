@@ -1,0 +1,9 @@
+ul li{
+	font-size:14px;
+	display:inline-block;
+	margin: 1px;
+	padding:1px;
+}
+a {
+	text-decoration: none;
+}

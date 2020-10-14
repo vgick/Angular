@@ -1,0 +1,10 @@
+<div class="side-menu">
+	<mat-selection-list [multiple]="false" [ngModel]="currentURL">
+		<mat-list-option class="menuItem"
+								*ngFor="let menuItem of menuItems"
+							  [routerLink]="'/' + menuItem.Route"
+							  [value]="menuItem.Route"
+							  [disabled]="menuItem.Disabled"
+		>{{menuItem.Label}}</mat-list-option>
+	</mat-selection-list>
+</div>

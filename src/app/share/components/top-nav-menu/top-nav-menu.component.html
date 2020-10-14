@@ -1,0 +1,35 @@
+<header>
+	<nav
+		class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow fixed-top"
+	>
+		<div class="container">
+			<a class="navbar-brand title" [routerLink]="['/']">МФО WEB application</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target=".navbar-collapse"
+				aria-label="Toggle navigation"
+				[attr.aria-expanded]="isExpanded"
+				(click)="toggle()"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div
+				class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+				[ngClass]="{ show: isExpanded }"
+			>
+				<ul class="navbar-nav flex-grow">
+					<li class="nav-item"
+						 [routerLinkActive]="['link-active']"
+						 [routerLinkActiveOptions]="{ exact: true }">
+						<a mat-button class="nav-link text-dark" [routerLink]="['/']"><mat-icon>home</mat-icon>&nbsp;&nbsp;Home&nbsp;&nbsp;</a>
+					</li>
+					<li class="nav-item" [routerLinkActive]="['link-active']">
+						<a mat-button class="nav-link text-dark" [routerLink]="['/registrar']"><mat-icon>library_books</mat-icon>&nbsp;&nbsp;Архив&nbsp;&nbsp;</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>

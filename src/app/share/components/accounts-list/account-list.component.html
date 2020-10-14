@@ -1,0 +1,49 @@
+<mat-accordion multi>
+	<mat-expansion-panel>
+		<mat-expansion-panel-header>
+			<mat-panel-title>Список договоров</mat-panel-title>
+			<mat-panel-description>Текущие договора на проверке</mat-panel-description>
+		</mat-expansion-panel-header>
+		<div class="m-2 mt-3 mb-3">
+			<table mat-table [dataSource]="dataSource" matSort class="account-table w-100">
+
+				<ng-container matColumnDef="doc_number">
+					<th mat-header-cell *matHeaderCellDef mat-sort-header style="width: 10%"> Номер документа </th>
+					<td mat-cell *matCellDef="let element" class="text-left"> {{element.doc_number}} </td>
+				</ng-container>
+
+				<ng-container matColumnDef="doc_date">
+					<th mat-header-cell *matHeaderCellDef mat-sort-header style="width: 10%"> Дата документа </th>
+					<td mat-cell *matCellDef="let element" class="text-left"> {{element.doc_date}} </td>
+				</ng-container>
+
+				<ng-container matColumnDef="fio">
+					<th mat-header-cell *matHeaderCellDef mat-sort-header style="width: 25%"> ФИО </th>
+					<td mat-cell *matCellDef="let element" class="text-left"> {{element.fio}} </td>
+				</ng-container>
+
+				<ng-container matColumnDef="organization_name">
+					<th mat-header-cell *matHeaderCellDef mat-sort-header style="width: 30%"> Организация </th>
+					<td mat-cell *matCellDef="let element" class="text-left"> {{element.organization_name}} </td>
+				</ng-container>
+
+				<ng-container matColumnDef="doc_status">
+					<th mat-header-cell *matHeaderCellDef mat-sort-header style="width: 15%"> Статус </th>
+					<td mat-cell *matCellDef="let element" class="text-left"> {{element.doc_status}} </td>
+				</ng-container>
+
+				<ng-container matColumnDef="load">
+					<th mat-header-cell  *matHeaderCellDef style="width: 10%"> Поллучить из 1С </th>
+					<td mat-cell *matCellDef="let element" class="text-center">
+						<button mat-stroked-button (click)="load(element.doc_number)"><mat-icon>assignment</mat-icon>&nbsp;Открыть</button>
+					</td>
+				</ng-container>
+
+				<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+				<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+			</table>
+		</div>
+
+	</mat-expansion-panel>
+</mat-accordion>
+

@@ -1,0 +1,50 @@
+.side-menu {
+	height: 100vh;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-shadow:1px 5px 10px 0 rgba(0,0,0, 0.5);
+	background-color: #f8f9fa;
+}
+
+.menuItem {
+	color: gray;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	white-space: nowrap;
+	border-radius: 3px;
+	margin-top: 5px;
+
+	box-shadow:2px 0 10px 0 rgba(0,0,0, 0.5);
+	-moz-box-shadow:2px 0 10px 0 rgba(0,0,0, 0.5);
+	-webkit-box-shadow:2px 0 10px 0 rgba(0,0,0, 0.5);
+
+}
+
+mat-selection-list mat-list-option {
+	height: 34px;
+	border-color: black;
+}
+
+mat-list-option[aria-selected="true"] {
+	background: black;
+	color: white;
+}
+
+mat-list-option[aria-selected="true"]:hover {
+	background: rgba(0, 0, 0, 0.70);
+	color: #ffe;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+<div class=" col-12 input-group pl-4">
+	<mat-form-field>
+		<mat-label>Регион</mat-label>
+		<mat-select placeholder="holder" [(ngModel)]="currentRegion">
+			<mat-option *ngFor="let region of regionList" [value]="region">{{region}}</mat-option>
+		</mat-select>
+	</mat-form-field>
+</div>

@@ -1,0 +1,8 @@
+<div class="row">
+	<div class="col-12">
+		<mat-progress-bar mode="query" *ngIf="loading"></mat-progress-bar>
+	</div>
+</div>
+
+<app-registrar-client-card *ngFor="let client of clients" [client]="client" [account1CCode]="account1CCode">
+</app-registrar-client-card>

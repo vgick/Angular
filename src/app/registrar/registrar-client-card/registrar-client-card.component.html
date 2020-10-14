@@ -1,0 +1,32 @@
+<div class="card mt-5 mat-elevation-z2">
+	<mat-progress-bar mode="query" *ngIf="loadingData"></mat-progress-bar>
+	<mat-card>
+
+		<mat-card-header>
+			<mat-icon mat-card-avatar>face</mat-icon>
+			<mat-card-title>{{fio}}</mat-card-title>
+			<mat-card-subtitle>{{getAffiliationString()}}</mat-card-subtitle>
+		</mat-card-header>
+
+		<mat-card-content>
+
+			<app-photo-list [client1CCode]="client.code1C" [exclude]="account1CCode" class="mb-4"></app-photo-list>
+
+			<div class="m-2 pb-2">
+				<mat-divider class="mb-3"></mat-divider>
+			</div>
+
+			<app-registrar-file-uploaded
+				*ngFor="let document of registrarDocuments"
+				[registrarDocument]="document"
+				[account1CCode]="account1CCode"
+				[client1CCode]="client.code1C"
+			>
+			</app-registrar-file-uploaded>
+		</mat-card-content>
+
+	</mat-card>
+
+</div>
+
+

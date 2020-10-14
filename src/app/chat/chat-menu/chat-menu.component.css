@@ -1,0 +1,97 @@
+.vertical-menu {
+	position: fixed;
+	bottom: 100px;
+	margin: 0;
+	padding: 0;
+	height: 600px;
+	right: -500px;
+	-webkit-transition: right 0.3s;
+	-moz-transition: right 0.3s;
+	transition: right 0.3s;
+	z-index: 100;
+}
+
+.add-post {
+	height: 80px;
+}
+
+.divider {
+	border-width: 1px;
+	border-style: groove;
+}
+
+.post-list {
+	height: 353px;
+	overflow: auto;
+	overflow-x:hidden;
+}
+
+.post-list-section {
+	height: 490px;
+}
+
+.menu-body {
+	background-color: #f8f9fa;
+	width: 500px;
+	height: 600px;
+	box-shadow:4px 0 20px 0 rgba(0,0,0, 0.5);
+	-moz-box-shadow:4px 0 20px 0 rgba(0,0,0, 0.5);
+	-webkit-box-shadow:4px 0 20px 0 rgba(0,0,0, 0.5);
+	overflow-y: auto;
+}
+
+.vertical-text {
+	font-size: 16px;
+	writing-mode: vertical-lr;
+	cursor: pointer;
+	background: rgba(120, 90, 184, 0.98);
+	color: #fff;
+	display: block;
+	height: 250px;
+	width: 21px;
+	text-align: center;
+	border-bottom-left-radius: 7px;
+	border-top-left-radius: 7px;
+	margin: 0;
+	margin-top: 300px;
+	padding: 0;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-right-width: 0;
+}
+
+.show {
+	right: 0;
+}
+
+.mat-card {
+	height: 100%;
+}
+
+.bottom-radius {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.top-radius {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
